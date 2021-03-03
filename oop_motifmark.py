@@ -284,7 +284,7 @@ def drawing(gene_objects, output_file, pallete, input_file, motif_number):
     for genes in gene_objects:
         if gene_objects[genes].gene.width > output_width:
             output_width = gene_objects[genes].gene.width
-    with cairo.SVGSurface(output_file, output_width + LEFT_MARGIN, (len(gene_objects) +2) * GENE_HEIGHT) as surface:
+    with cairo.SVGSurface(output_file, output_width + 2*LEFT_MARGIN, (len(gene_objects) +2) * GENE_HEIGHT) as surface:
         context = cairo.Context(surface)
         #loop through gene_groups
         gene_count = 0
